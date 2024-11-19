@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: saranxgillpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saranxgillpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: saranxgillpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: saranxgillpipelinesjavascriptdocker 
+          image: sarancontainerregistry.azurecr.io/saranxgillpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
